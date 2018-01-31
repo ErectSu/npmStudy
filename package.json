@@ -1,0 +1,24 @@
+{
+  "name": "npm-study",
+  "version": "1.0.0",
+  "description": "walkthrough about building a npm package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamuPP/npmStudy.git"
+  },
+  "keywords": [
+    "npm",
+    "build",
+    "study"
+  ],
+  "author": "hamupp 734877275@qq.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hamuPP/npmStudy/issues"
+  },
+  "homepage": "https://github.com/hamuPP/npmStudy#readme"
+}
