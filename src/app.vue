@@ -5,11 +5,12 @@
     <div class="msg-wrapper">
         <span>hello!</span>
         <span class="account">{{data.name}}</span>
+        <p>你来自{{data.country}}</p>
     </div>
 </template>
 <script>
     export default {
-        name:'helloMsg',
+        name:'Msg',
         data () {
             return {}
         },

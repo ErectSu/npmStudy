@@ -1,7 +1,10 @@
 # Project
 node_modules
 bower_components
-dist/*.map
+
+# 现在学习npm包制作中，我需要监视dist目录下的变动
+# dist/*.map
+
 /_*
 npm-debug.log
 

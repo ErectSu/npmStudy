@@ -1,19 +1,21 @@
 /**
- * Created by Simon on 2016/11/22.
+ * Created by 879372858@qq.com on 2018/2/10.
  */
 const path = require("path");
 const webpack = require("webpack");
 const uglify = require("uglifyjs-webpack-plugin");
 
 module.exports = {
+    devtool: 'source-map',
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist/',
-        filename: 'helloMsg.min.js'
+        filename: 'helloMsg.min.js',
+        libraryTarget: 'umd',
+        umdNamedDefine: true
     },
     module: {
-        // noParse: /es6-promise\.js$/,
         rules: [{
                 test: /\.vue$/,
                 loader: 'vue-loader'
@@ -41,18 +43,7 @@ module.exports = {
             }
         ]
     },
-    devtool: 'source-map',
     plugins: [
-        // new uglify({
-        //     uglifyOptions: {
-        //         output: {
-        //             beautify: false,
-        //             comments: false
-        //         },
-        //         compress: true,
-        //         warnings: false
-        //     }
-        // }),
         new webpack.DefinePlugin({
             "process.env": {
                 NODE_ENV: JSON.stringify("production")
